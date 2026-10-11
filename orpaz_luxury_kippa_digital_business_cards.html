@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORPAZ France & Luxury Kippa - Cartes de Visite Officielles</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        orpaz: {
+                            dark: '#0a0e17',
+                            steel: '#1e293b',
+                            gold: '#eab308',
+                        },
+                        luxury: {
+                            dark: '#120f0d',
+                            velvet: '#1c1714',
+                            gold: '#d4af37',
+                            champagne: '#fef3c7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #07090e 0%, #111827 50%, #07090e 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+        .orpaz-theme-bg {
+            background: rgba(15, 23, 42, 0.92);
+            border: 1px solid rgba(234, 179, 8, 0.35);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(234, 179, 8, 0.15);
+        }
+        .luxury-theme-bg {
+            background: rgba(26, 21, 18, 0.92);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85), 0 0 30px rgba(212, 175, 55, 0.15);
+        }
+        .tab-active-orpaz {
+            background: linear-gradient(135deg, #ca8a04 0%, #a16207 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(202, 138, 4, 0.4);
+        }
+        .tab-active-luxury {
+            background: linear-gradient(135deg, #d4af37 0%, #996515 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+        }
+        .gold-text {
+            background: linear-gradient(135deg, #fef08a 0%, #ca8a04 50%, #fef08a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-between min-h-screen p-4 sm:p-6 md:p-8">
+
+    <!-- Header Section -->
+    <header class="w-full max-w-4xl mx-auto text-center py-4">
+        <div class="inline-block px-4 py-1.5 mb-3 rounded-full text-xs font-semibold tracking-widest uppercase bg-amber-500/10 border border-amber-500/30 text-amber-400">
+            <i class="fa-solid fa-id-card mr-2"></i> Cartes de Visite Digitales Officielles
+        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-wide">
+            Portail <span class="gold-text">Exclusif</span> Paris
+        </h1>
+        <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-lg mx-auto">
+            Basculez entre nos deux enseignes pour accéder directement à nos coordonnées, contacts et sites officiels.
+        </p>
+
+        <!-- Brand Switcher Tabs -->
+        <div class="flex justify-center items-center gap-3 mt-6 sm:mt-8">
+            <button onclick="switchBrand('orpaz')" id="btn-orpaz" class="px-5 sm:px-7 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 tab-active-orpaz flex items-center gap-2.5">
+                <i class="fa-solid fa-shield-halved text-amber-200"></i> ORPAZ France
+            </button>
+            <button onclick="switchBrand('luxury')" id="btn-luxury" class="px-5 sm:px-7 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 bg-slate-900/80 text-slate-300 border border-slate-700 hover:border-amber-500/50 flex items-center gap-2.5">
+                <i class="fa-solid fa-crown text-amber-400"></i> Luxury Kippa
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Card Area -->
+    <main class="w-full max-w-xl mx-auto my-auto py-4">
+        
+        <!-- ================= ORPAZ FRANCE CARD ================= -->
+        <div id="card-orpaz" class="orpaz-theme-bg rounded-3xl p-6 sm:p-8 transition-all duration-500 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute -right-24 -top-24 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Card Header -->
+            <div class="flex flex-col sm:flex-row items-center gap-5 border-b border-slate-800 pb-6 mb-6">
+                <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-2 border-amber-500/40 flex items-center justify-center shadow-2xl flex-shrink-0">
+                    <i class="fa-solid fa-shield-halved text-4xl sm:text-5xl gold-text"></i>
+                </div>
+                <div class="text-center sm:text-left">
+                    <div class="inline-block px-3 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-semibold tracking-wider uppercase mb-1">
+                        Atelier & Boutique Officielle
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white tracking-wide">ORPAZ France</h2>
+                    <p class="text-slate-300 text-xs sm:text-sm mt-1">Équipements & Créations de Haute Précision</p>
+                </div>
+            </div>
+
+            <!-- Contact Information List -->
+            <div class="space-y-3.5 mb-8">
+                <!-- Address -->
+                <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800/80 hover:border-amber-500/40 transition">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">Adresse Atelier & Boutique</p>
+                        <p class="text-slate-100 text-sm sm:text-base font-semibold mt-0.5">11 rue Bleue, 75009 Paris</p>
+                    </div>
+                </div>
+
+                <!-- Phone (Updated) -->
+                <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800/80 hover:border-amber-500/40 transition">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">Téléphone Direct</p>
+                        <a href="tel:0753956067" class="text-slate-100 text-sm sm:text-base font-semibold hover:text-amber-400 transition">07 53 95 60 67</a>
+                    </div>
+                </div>
+
+                <!-- Email (Updated) -->
+                <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800/80 hover:border-amber-500/40 transition">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">Adresse Email</p>
+                        <a href="mailto:contact@orpaz.fr" class="text-slate-100 text-sm sm:text-base font-semibold hover:text-amber-400 transition">contact@orpaz.fr</a>
+                    </div>
+                </div>
+
+                <!-- Website -->
+                <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800/80 hover:border-amber-500/40 transition">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">Site Web Officiel</p>
+                        <a href="https://orpaz.fr" target="_blank" class="text-amber-400 text-sm sm:text-base font-semibold hover:underline">orpaz.fr</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <a href="https://orpaz.fr" target="_blank" class="flex-1 py-3.5 px-6 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold text-center shadow-lg shadow-amber-500/20 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Visiter orpaz.fr
+                </a>
+                <button onclick="downloadOrpazVCard()" class="py-3.5 px-5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-center border border-slate-700 hover:border-amber-500/50 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-address-book text-amber-400"></i> Enregistrer
+                </button>
+            </div>
+        </div>
+
+        <!-- ================= LUXURY KIPPA FRANCE CARD ================= -->
+        <div id="card-luxury" class="luxury-theme-bg rounded-3xl p-6 sm:p-8 transition-all duration-500 relative overflow-hidden hidden">
+            <!-- Glow Effect -->
+            <div class="absolute -right-24 -top-24 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Card Header -->
+            <div class="flex flex-col sm:flex-row items-center gap-5 border-b border-amber-900/30 pb-6 mb-6">
+                <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-amber-950/80 via-zinc-900 to-amber-950/80 border-2 border-amber-500/50 flex items-center justify-center shadow-2xl flex-shrink-0">
+                    <i class="fa-solid fa-crown text-4xl sm:text-5xl text-amber-400"></i>
+                </div>
+                <div class="text-center sm:text-left">
+                    <div class="inline-block px-3 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-semibold tracking-wider uppercase mb-1">
+                        Boutique E-commerce De Luxe
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white tracking-wide">Luxury Kippa</h2>
+                    <p class="text-amber-200/80 text-xs sm:text-sm mt-1">Kippot d'Exception & Broderies Sur-Mesure</p>
+                </div>
+            </div>
+
+            <!-- Contact Information List -->
+            <div class="space-y-3.5 mb-8">
+                <!-- Phone (Updated) -->
+                <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-black/40 border border-amber-900/30 hover:border-amber-500/40 transition">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-amber-300/70 uppercase tracking-wider font-medium">Téléphone Direct / WhatsApp</p>
+                        <a href="tel:0623398027" class="text-slate-100 text-sm sm:text-base font-semibold hover:text-amber-400 transition">06 23 39 80 27</a>
+                    </div>
+                </div>
+
+                <!-- Email (Updated) -->
+                <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-black/40 border border-amber-900/30 hover:border-amber-500/40 transition">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-amber-300/70 uppercase tracking-wider font-medium">Adresse Email</p>
+                        <a href="mailto:luxurykippa@gmail.com" class="text-slate-100 text-sm sm:text-base font-semibold hover:text-amber-400 transition">luxurykippa@gmail.com</a>
+                    </div>
+                </div>
+
+                <!-- Website Shopify -->
+                <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-black/40 border border-amber-900/30 hover:border-amber-500/40 transition">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-amber-300/70 uppercase tracking-wider font-medium">Boutique Shopify</p>
+                        <a href="https://luxurykippa.myshopify.com" target="_blank" class="text-amber-400 text-sm sm:text-base font-semibold hover:underline">luxurykippa.myshopify.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <a href="https://luxurykippa.myshopify.com" target="_blank" class="flex-1 py-3.5 px-6 rounded-xl bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-slate-950 font-bold text-center shadow-lg shadow-amber-600/20 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-bag-shopping"></i> Visiter la Boutique
+                </a>
+                <button onclick="downloadLuxuryVCard()" class="py-3.5 px-5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-amber-200 font-medium text-center border border-amber-900/50 hover:border-amber-500/50 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-address-book text-amber-400"></i> Enregistrer
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-4xl mx-auto text-center py-4 border-t border-slate-800/80 mt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+        <p>© 2026 ORPAZ France & Luxury Kippa France. Tous droits réservés.</p>
+        <div class="flex items-center gap-4">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-emerald-500 text-[8px]"></i> Services Actifs</span>
+            <button onclick="shareActiveCard()" class="hover:text-amber-400 transition underline cursor-pointer">Partager cette carte</button>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 border border-amber-500/50 text-slate-200 px-5 py-3 rounded-xl shadow-2xl transform translate-y-32 opacity-0 transition-all duration-300 flex items-center gap-3 z-50">
+        <i class="fa-solid fa-circle-check text-amber-400 text-lg"></i>
+        <span id="toast-msg" class="text-sm font-medium">Action effectuée avec succès !</span>
+    </div>
+
+    <script>
+        let currentBrandActive = 'orpaz';
+
+        function switchBrand(brand) {
+            currentBrandActive = brand;
+            const btnOrpaz = document.getElementById('btn-orpaz');
+            const btnLuxury = document.getElementById('btn-luxury');
+            const cardOrpaz = document.getElementById('card-orpaz');
+            const cardLuxury = document.getElementById('card-luxury');
+
+            if (brand === 'orpaz') {
+                btnOrpaz.className = "px-5 sm:px-7 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 tab-active-orpaz flex items-center gap-2.5";
+                btnLuxury.className = "px-5 sm:px-7 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 bg-slate-900/80 text-slate-300 border border-slate-700 hover:border-amber-500/50 flex items-center gap-2.5";
+                
+                cardOrpaz.classList.remove('hidden');
+                cardLuxury.classList.add('hidden');
+            } else {
+                btnLuxury.className = "px-5 sm:px-7 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 tab-active-luxury flex items-center gap-2.5";
+                btnOrpaz.className = "px-5 sm:px-7 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 bg-slate-900/80 text-slate-300 border border-slate-700 hover:border-amber-500/50 flex items-center gap-2.5";
+                
+                cardLuxury.classList.remove('hidden');
+                cardOrpaz.classList.add('hidden');
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.innerText = message;
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 3000);
+        }
+
+        function downloadOrpazVCard() {
+            const vcard = 
+"BEGIN:VCARD\n" +
+"VERSION:3.0\n" +
+"FN:ORPAZ France\n" +
+"ORG:ORPAZ France - Atelier & Boutique\n" +
+"TEL:+33753956067\n" +
+"EMAIL:contact@orpaz.fr\n" +
+"ADR:;11 rue Bleue;Paris;;75009;France\n" +
+"URL:https://orpaz.fr\n" +
+"NOTE:Atelier et boutique 11 rue Bleue 75009 Paris\n" +
+"END:VCARD";
+            downloadFile(vcard, "ORPAZ_France.vcf");
+            showToast("Contact vCard ORPAZ téléchargé !");
+        }
+
+        function downloadLuxuryVCard() {
+            const vcard = 
+"BEGIN:VCARD\n" +
+"VERSION:3.0\n" +
+"FN:Luxury Kippa France\n" +
+"ORG:Luxury Kippa\n" +
+"TEL:+33623398027\n" +
+"EMAIL:luxurykippa@gmail.com\n" +
+"URL:https://luxurykippa.myshopify.com\n" +
+"NOTE:Boutique en ligne Luxury Kippa\n" +
+"END:VCARD";
+            downloadFile(vcard, "Luxury_Kippa.vcf");
+            showToast("Contact vCard Luxury Kippa téléchargé !");
+        }
+
+        function downloadFile(content, filename) {
+            const blob = new Blob([content], { type: 'text/vcard;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.setAttribute('download', filename);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function shareActiveCard() {
+            const url = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: currentBrandActive === 'orpaz' ? 'ORPAZ France' : 'Luxury Kippa France',
+                    text: 'Découvrez la carte de visite officielle',
+                    url: url,
+                }).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(url).then(() => {
+                    showToast("Lien de la carte copié dans le presse-papier !");
+                });
+            }
+        }
+    </script>
+</body>
+</html>
